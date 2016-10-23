@@ -1,0 +1,41 @@
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-sm-6">
+       <div class="panel panel-default">
+          <div class="panel-heading">Document Status</div>
+          <div class="panel-body">
+            <%= pie_chart document_status_path %>
+
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+       <div class="panel panel-default">
+          <div class="panel-heading">Relationship At Galance</div>
+          <div class="panel-body">
+            <%= pie_chart compliance_rate_path %>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row" style="display:none">
+    <div class="col-sm-6">
+       <div class="panel panel-default">
+          <div class="panel-heading">Document Status</div>
+          <div class="panel-body">
+            <%#= line_chart topic_risk_trend_path, discrete: true %>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+       <div class="panel panel-default">
+          <div class="panel-heading">Audits Result (Past 12 Months)</div>
+          <div class="panel-body">
+            <%#= pie_chart audit_result_path, colors: ["#FF7E00", "green", "red"] %>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>

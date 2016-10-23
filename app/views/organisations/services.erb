@@ -1,0 +1,76 @@
+
+<% if @has_service %>
+<div class="row">
+	<pre>
+		Please Note: You have selected the services you provide, if you contintue, all Documents in your Relationship will be overwriten !
+	</pre>
+</div>
+<% end %>
+
+<div class="row">
+	<div class="col-sm-8">
+		<h3>Tell us about any specialised services your Relationship provides:</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="shopping-cart" id="services_table">
+					<% @services.each do |s| %>
+						<tr>
+							<td class="image"><%= image_tag 'product1.jpg' %></td>
+							<td>
+								<div class="cart-item-title"><%= s.name %></div>
+								<div class="feature color">
+									Documents: <b>12</b>
+								</div>
+								<div class="feature"><%= s.description %></div>
+							</td>
+							<td class="quantity">
+							</td>
+							<td class="price"></td>
+							<td class="actions">
+								<input type="checkbox" name="chk_Document" value="<%= s.id %>"
+								<% if @selected_service.include?(s.id)%>
+								 checked
+								 <% end %> >
+							</td>
+						</tr>
+					<% end %>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Shopping Cart Totals -->
+			<div class="col-md-12 col-md-offset-0 col-sm-6 col-sm-offset-6">
+				<table class="cart-totals">
+					<tr class="cart-grand-total">
+						<td><b>Selected Service</b></td>
+						<td>12</td>
+					</tr>
+					<tr class="cart-grand-total">
+						<td><b>Documents</b></td>
+						<td>46</td>
+					</tr>
+				</table>
+				<% if @has_service %>
+					<div class="well">
+						Please Note: You have selected the services you provide, if you contintue, all Documents in your Relationship will be overwriten !
+					</div>
+				<% end %>
+				<!-- Action Buttons -->
+				<div class="pull-right">
+					<a href="#" class="btn" id="btn_save">Save</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-4">
+		<h3>User Notes</h3>
+		<p>
+			Review the services which you provide at your Relationship and we will ensure that you have Documents in place to cover all of them. For example this could include ‘Provision of the seasonal influenza vaccination’ or ‘lipid screening’ services.
+		</p>
+		
+	</div>
+
+</div>
