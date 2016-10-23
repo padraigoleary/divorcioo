@@ -19,8 +19,8 @@ class Organisation < ActiveRecord::Base
   validates_uniqueness_of :name
   validates :name, presence: true
 
-  validates_uniqueness_of :gms_code
-  validates :gms_code, presence: true
+
+  
 
 
   # has_many :pending_users

@@ -37,7 +37,7 @@
 <% end %>
 
 <% if @organisations.empty? %>
-    <h3>You are not a member of any Relationships, here are your options:</h3>
+    <h3>Agrega tu relación:</h3>
     <div class="col-sm-8">
       <div class="basic-login">
         <%= bootstrap_form_for @organisation, :url => {:controller => "organisations", :action => "create"}  do |form| %>

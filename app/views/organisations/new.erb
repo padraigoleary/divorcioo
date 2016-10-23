@@ -1,7 +1,7 @@
 <%= bootstrap_form_for @organisation do |form| %>
     <%= form.hidden_field :user_id, value: @current_user_id %>
     <%= form.text_field :name %>
-    <%= form.text_field :gms_code, gms_code: 00000000 %>
+    
     <div class="actions">
       <%= form.submit "Create New Marriage", class: "btn btn-primary"%>
     </div>
