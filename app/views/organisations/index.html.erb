@@ -66,7 +66,7 @@
           <%= image_tag 'service-icon/diamond.png' %>
            <% if org == @current_organisation %>
                 <h3><%= org.name %></h3>
-                <%= link_to 'View s', users_organisations_path %>
+                <%= link_to 'View', users_organisations_path %>
             <% else %>
                 <h3><%= org.name %></h3>
                 <%= link_to 'Select', "organisations/save_current_organisation?organisation_id=" + org.id.to_s, method: :post %>
@@ -82,15 +82,15 @@
       </div>
     <% end %>
 
-    <div class="col-md-3 col-sm-6">
+    <!-- <div class="col-md-3 col-sm-6">
       <div class="service-wrapper" onclick="javascript:window.location='organisations/new'" >
         <%= image_tag 'service-icon/diamond.png' %>
               <h3>+</h3>
               <br />
              <!--  <br />
-              <br /> -->
+              <br />
         <p>Create New Relationship</p>
       </div>
-    </div>
+    </div> -->
 
 <% end %>
