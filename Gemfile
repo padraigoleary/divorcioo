@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'ruby' '2.2.4'
+## Specify Ruby version for Heroku
+ruby '2.3.1'
 
 gem 'devise', '3.4.1'
 
