@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'ruby' '2.2.4'
+
 gem 'devise', '3.4.1'
 
 gem 'rails4-autocomplete', '1.1.1'
@@ -65,7 +67,7 @@ gem 'groupdate' #note, does not support SQLite
 
 gem 'pdfjs_rails',:git => 'https://github.com/shyammohankanojia/pdfjs_rails.git'
 
-# Upload PDFs and Images to AWS S3 
+# Upload PDFs and Images to AWS S3
 gem 'aws-sdk', '< 2.0'
 
 #queuing system for rails 4.2+
